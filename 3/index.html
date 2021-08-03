@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict"
+
+        let a = Number(prompt("Введите первое число"));
+        let b = Number(prompt("Введите второе число"));
+        if(a >= 0 && b >= 0) {
+            let difference = a - b;
+            alert(`${a} - ${b} = ${difference}`);
+        }
+        else if (a < 0 && b < 0) {
+            let multiplication = a * b;
+            alert(`${a} * ${b} = ${multiplication}`);
+        }
+        else if((Math.sign(a) === -1 && Math.sign(b) === 1) || (Math.sign(a) === 1 && Math.sign(b) === -1) || (Math.sign(a) === 0 || Math.sign(b) === 0)) {
+            let sum = a + b;
+            alert(`${a} + ${b} = ${sum}`);
+        }
+    </script>
+</body>
+</html>
