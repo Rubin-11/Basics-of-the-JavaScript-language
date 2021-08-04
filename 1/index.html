@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict"
+
+        //пример 1 
+        let a = 1, b = 1, c, d;
+        c = ++a; 
+        /*
+        с = 1 + a 
+        Префиксный инкремент
+        a = 2
+        */
+        alert(c); // ответ: 2 
+
+        //пример 2 
+        d = b++; 
+        /*
+        d = b + 1 
+        Посфиксный инкремент
+        d = b = 1
+        потом происходит прибавление b + 1
+        b = 2
+        */
+        alert(d); //ответ: 1 
+
+        //пример 3 
+        c = 2 + ++a; 
+        /*
+        c = 2 + (1 + 2)
+        Префиксный инкремент (++a)
+        a = 3
+        c = 5
+        */
+        alert(c); //ответ: 5 
+
+        //пример 4 
+        d = 2 + b++; 
+        /*
+        Посфиксный инкремент (b++)
+        d = 2 + (2 + 1)
+        d = 4 
+        после происходит прибавление 1 к b
+        b = 3
+        */
+        alert(d); //ответ: 4 
+        alert(a); //3 
+        alert(b); //3
+        /*  
+        каждое новое присвоение значения переменным сохранялось,
+        поэтому получили в конце
+        a = 3;
+        b = 3;
+        c = 5;
+        d = 4;
+        */
+    </script>
+</body>
+</html>
